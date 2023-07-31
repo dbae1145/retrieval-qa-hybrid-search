@@ -118,7 +118,7 @@ def create_sections(filename, page_map):
     return sections
 
 #initalize embedding model
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = ''
 model_name = 'text-embedding-ada-002'
 embed = OpenAIEmbeddings(
     model=model_name,
@@ -126,11 +126,11 @@ embed = OpenAIEmbeddings(
 )
 
 pinecone.init(
-    api_key="8139d96b-a22a-497c-b3cc-cee4093a853e",  # app.pinecone.io
-    environment="us-west4-gcp-free"  # next to api key in console
+    api_key="",  # app.pinecone.io
+    environment=""  # next to api key in console
 )
 
-index_name = 'vector-search'
+index_name = ''
 
 if index_name not in pinecone.list_indexes():
     # we create a new index
